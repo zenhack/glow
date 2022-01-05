@@ -1083,6 +1083,7 @@
   (try (libp2p-connect libp2p-client peer-multiaddr)
     (catch (e)
       (displayln "Unable to connect to client...")
+      (display-exception e)
       (if (and timeout (> timeout 0))
           (let ()
             (displayln "Polling again in 1s...")

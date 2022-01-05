@@ -150,7 +150,14 @@
                                        ; Also used for regression testing against:
                                        ; https://gitlab.com/mukn/glow/-/issues/195
 
-       (DBG "Choosing role")
+       (DBG "Choosing seller role")
+
+       ;; Possible Error:
+       ;; ```
+       ;; Unable to connect to client...
+       ;; libp2p-request: [libp2p-error] unknown multihash code
+       ;; ```
+       ;; https://docs.libp2p.io/reference/glossary/#multihash
 
        (with-io-port proc-seller
          (lambda ()
